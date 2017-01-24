@@ -1,6 +1,21 @@
 # myvim
 My Vim configuration
 
+# Installation
+You can just clone the repo and crete a link to downloaded dir:
+
+```bash
+git clone https://github.com/aminfara/myvim.git
+ln -s myvim ~/.vim
+vim
+```
+
+# Key bindings
+Mode | Key | Function
+---- | --- | --------
+n | <C-L> | clears search highlight (by sensible)
+i | <C-U> | undo in insert mode (by sensible)
+
 # Development
 ## Todo
 * Mnemonic shortcuts

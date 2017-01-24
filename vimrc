@@ -4,8 +4,8 @@
 
 " First letter n, i, v, a are modes (a for all)
 
-" n <C-L> clears search highlight (by sensible)
-" i <C-U> undo in insert mode (by sensible)
+" n | <C-L> | clears search highlight (by sensible)
+" i | <C-U> | undo in insert mode (by sensible)
 
 
 "===============================================================================
@@ -33,3 +33,17 @@ call plug#end()
 " See FAQ on https://github.com/tpope/vim-sensible
 "
 runtime! plugin/sensible.vim
+
+" Setting up vim related files and directories
+"
+silent !mkdir -vp ~/.vim/tmp/undo/
+silent !mkdir -vp ~/.vim/tmp/swap/
+silent !mkdir -vp ~/.vim/tmp/backup/
+silent !mkdir -vp ~/.vim/tmp/spell/
+set undodir=~/.vim/tmp/undo,.
+set directory=~/.vim/tmp/swap,.
+set backupdir=~/.vim/tmp/backup,.
+set spellfile=~/.vim/tmp/spell/en.utf-8.add
+set viminfo+=n~/.vim/tmp/viminfo
+
+" vim:set filetype=vim expandtab shiftwidth=2:
