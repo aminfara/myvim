@@ -22,6 +22,7 @@ endif
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 
@@ -145,10 +146,10 @@ set foldenable
 
 
 ""
-" Invisible charachters
+" Invisible characters
 "
 set listchars=tab:⇥\ ,trail:·
-set list  " Show invisible charachters
+set list  " Show invisible characters
 
 
 ""
@@ -168,10 +169,10 @@ set splitright
 ""
 " Terminal color settings
 "
-" Setting Color to 16 for xterm
+" Setting color to 16 for xterm
 if &term == "xterm" || &term == 'screen'
   set t_Co=16
-  " clearing uses the current background color
+  " clearing using the current background color
   set t_ut=
   colorscheme default
 endif
@@ -183,13 +184,8 @@ endif
 " Setting color to 256 for more sophisticated terminals
 if &term =~ '256color'
   set t_Co=256
-  " clearing uses the current background color
+  " clearing using the current background color
   set t_ut=
-endif
-
-if &term =~ '256color'
-  silent! colorscheme solarized
-  set background=dark
 endif
 
 
@@ -223,9 +219,20 @@ endif
 set completeopt=menuone,preview       " completion pop-up
 set cursorline                        " draws a line to show the current line
 set noshowmode                        " don't show mode, status bar plugin will show it
-set number                            " show linue numbers
+set number                            " show line numbers
 set showcmd                           " show partial command
 set visualbell                        " beep visually
+
+"===============================================================================
+" Plugins Configurations
+"===============================================================================
+
+" Solarized color scheme
+"----------------------------------------
+if &term =~ '256color'
+  silent! colorscheme solarized
+  set background=dark
+endif
 
 
 " vim:set filetype=vim expandtab shiftwidth=2:
