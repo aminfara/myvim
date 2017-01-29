@@ -32,6 +32,7 @@ n | <Leader>fb | FZF Buffers
 n | <Leader>fc | FZF Commands
 n | <Leader>ff | FZF Files
 n | <Leader>fh | FZF File history
+n | <Leader>fl | FZF Lines
 n | <Leader>fm | FZF Maps
 n | <Leader>fs | FZF Ag
 n | <Leader>ft | FZF Tags

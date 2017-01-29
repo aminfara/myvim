@@ -25,6 +25,7 @@
 "n | <Leader>fc | FZF Commands
 "n | <Leader>ff | FZF Files
 "n | <Leader>fh | FZF File history
+"n | <Leader>fl | FZF Lines
 "n | <Leader>fm | FZF Maps
 "n | <Leader>fs | FZF Ag
 "n | <Leader>ft | FZF Tags
@@ -306,6 +307,7 @@ nnoremap <silent> <Leader>fb :Buffers<CR>
 nnoremap <silent> <Leader>fc :Commands<CR>
 nnoremap <silent> <Leader>ff :Files<CR>
 nnoremap <silent> <Leader>fh :History<CR>
+nnoremap <silent> <Leader>fl :Lines<CR>
 nnoremap <silent> <Leader>fm :Maps<CR>
 nnoremap <silent> <Leader>fs :Ag<CR>
 nnoremap <silent> <Leader>ft :Tags<CR>
