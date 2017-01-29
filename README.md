@@ -23,7 +23,7 @@ Plus all easymotion default mappings start with <leader><leader> for all sorts o
 # Development
 ## Todo
 * easymotion - done
-* Good status bar
+* Good status bar - Used airline - done
 * lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting
