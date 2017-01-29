@@ -28,13 +28,22 @@ n, v | <Leader><Leader>b | easymotion word backward motion
 n | cs | change surrounding
 n | ds | delete surrounding
 n | ys | insert surrounding
+n | <Leader>fb | FZF Buffers
+n | <Leader>fc | FZF Commands
+n | <Leader>ff | FZF Files
+n | <Leader>fh | FZF File history
+n | <Leader>fm | FZF Maps
+n | <Leader>fs | FZF Ag
+n | <Leader>ft | FZF Tags
 
 
 # Development
 ## Todo
 * easymotion - done
-* Good status bar - Used airline - done
+* Good status bar - Using airline - done
 * Surround - done
+* Project fuzzy find - Using FZF - done
+* Find in project (grep, ag, ...) - Using FZF - done
 * lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting
@@ -44,8 +53,6 @@ n | ys | insert surrounding
 * Autocompletion (all buffers, tags, ...)
 * Lint
 * Jump to test file
-* Project fuzzy find
-* Find in project (grep, ag, ...)
 * Beautify
 * Multi-cursor (sublime like behavior)
 * Spell-checking

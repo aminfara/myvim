@@ -21,7 +21,13 @@
 "n | cs | change surrounding
 "n | ds | delete surrounding
 "n | ys | insert surrounding
-
+"n | <Leader>fb | FZF Buffers
+"n | <Leader>fc | FZF Commands
+"n | <Leader>ff | FZF Files
+"n | <Leader>fh | FZF File history
+"n | <Leader>fm | FZF Maps
+"n | <Leader>fs | FZF Ag
+"n | <Leader>ft | FZF Tags
 
 "===============================================================================
 " Plugins
@@ -42,6 +48,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 
@@ -290,5 +298,15 @@ let g:maplocalleader = "\\"
 "----------------------------------------
 nmap <Leader>s <Plug>(easymotion-s2)
 vmap <Leader>s <Plug>(easymotion-s2)
+
+" FZF
+"----------------------------------------
+nnoremap <silent> <Leader>fb :Buffers<CR>
+nnoremap <silent> <Leader>fc :Commands<CR>
+nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <Leader>fh :History<CR>
+nnoremap <silent> <Leader>fm :Maps<CR>
+nnoremap <silent> <Leader>fs :Ag<CR>
+nnoremap <silent> <Leader>ft :Tags<CR>
 
 " vim:set filetype=vim expandtab shiftwidth=2:
