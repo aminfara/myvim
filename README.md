@@ -17,13 +17,24 @@ n | <C-L> | clears search highlight (by sensible)
 i | <C-U> | undo in insert mode (by sensible)
 n, v | <Leader>s | easymotion search
 
-Plus all easymotion default mappings start with <leader><leader> for all sorts of motions.
+Plus all default mappings for loaded modules. Here are some examples:
+
+Mode | Key | Function
+---- | --- | --------
+n, v | <Leader><Leader>w | easymotion word motion
+n, v | <Leader><Leader>j | easymotion line down motion
+n, v | <Leader><Leader>k | easymotion line up motion
+n, v | <Leader><Leader>b | easymotion word backward motion
+n | cs | change surrounding
+n | ds | delete surrounding
+n | ys | insert surrounding
 
 
 # Development
 ## Todo
 * easymotion - done
 * Good status bar - Used airline - done
+* Surround - done
 * lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting
@@ -43,7 +54,6 @@ Plus all easymotion default mappings start with <leader><leader> for all sorts o
 * Autosave
 * jk jump to normal mode
 * Bracket highlighting
-* Surround
 * git support
 * git gutter
 * Move line up and down (sublime like)
