@@ -2,7 +2,7 @@
 My Vim configuration
 
 # Installation
-You can just clone the repo and crete a link to downloaded dir:
+You can just clone the repository and create a link to downloaded directory:
 
 ```bash
 git clone https://github.com/aminfara/myvim.git
@@ -15,9 +15,16 @@ Mode | Key | Function
 ---- | --- | --------
 n | <C-L> | clears search highlight (by sensible)
 i | <C-U> | undo in insert mode (by sensible)
+n, v | <Leader>s | easymotion search
+
+Plus all easymotion default mappings start with <leader><leader> for all sorts of motions.
+
 
 # Development
 ## Todo
+* easymotion - done
+* Good status bar
+* lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting
 * Smart Indentation
@@ -35,7 +42,6 @@ i | <C-U> | undo in insert mode (by sensible)
 * Snippets
 * Autosave
 * jk jump to normal mode
-* easymotion
 * Bracket highlighting
 * Surround
 * git support

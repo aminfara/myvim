@@ -1,11 +1,15 @@
 "===============================================================================
-" Key mappings
+" Key Mappings Summary
 "===============================================================================
 
 " First letter n, i, v, a are modes (a for all)
 
 " n | <C-L> | clears search highlight (by sensible)
 " i | <C-U> | undo in insert mode (by sensible)
+" n, v | <Leader>s | easymotion search
+"
+" Plus all easymotion default mappings start with <leader><leader> for all
+" sorts of motions.
 
 
 "===============================================================================
@@ -23,11 +27,12 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 
 "===============================================================================
-" Vim general config
+" Vim General Config
 "===============================================================================
 
 " Sensible
@@ -234,5 +239,15 @@ if &term =~ '256color'
   set background=dark
 endif
 
+
+"===============================================================================
+" Key Bindings
+"===============================================================================
+
+let g:mapleader = "\<Space>"
+let g:maplocalleader = "\\"
+
+nmap <Leader>s <Plug>(easymotion-s2)
+vmap <Leader>s <Plug>(easymotion-s2)
 
 " vim:set filetype=vim expandtab shiftwidth=2:
