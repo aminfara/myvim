@@ -28,6 +28,7 @@
 "n | <Leader>fm | FZF Maps
 "n | <Leader>fs | FZF Ag
 "n | <Leader>ft | FZF Tags
+"n | <Leader>fw | FZF Ag word under cursor
 
 "===============================================================================
 " Plugins
@@ -308,5 +309,6 @@ nnoremap <silent> <Leader>fh :History<CR>
 nnoremap <silent> <Leader>fm :Maps<CR>
 nnoremap <silent> <Leader>fs :Ag<CR>
 nnoremap <silent> <Leader>ft :Tags<CR>
+nnoremap <silent> <Leader>fw :Ag <C-R><C-W><CR>
 
 " vim:set filetype=vim expandtab shiftwidth=2:

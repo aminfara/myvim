@@ -35,6 +35,7 @@ n | <Leader>fh | FZF File history
 n | <Leader>fm | FZF Maps
 n | <Leader>fs | FZF Ag
 n | <Leader>ft | FZF Tags
+n | <Leader>fw | FZF Ag word under cursor
 
 
 # Development
