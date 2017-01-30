@@ -37,6 +37,8 @@ n | <Leader>fm | FZF Maps
 n | <Leader>fs | FZF Ag
 n | <Leader>ft | FZF Tags
 n | <Leader>fw | FZF Ag word under cursor
+n | gc{motion} | Commentary toggle comment on a move
+n | gcc | Commentary toggle line comment
 
 
 # Development
@@ -46,6 +48,7 @@ n | <Leader>fw | FZF Ag word under cursor
 * Surround - done
 * Project fuzzy find - Using FZF - done
 * Find in project (grep, ag, ...) - Using FZF - done
+* Commenting - Using Commentary - done
 * lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting

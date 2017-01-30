@@ -4,32 +4,34 @@
 
 " First letter n, i, v, a are modes (a for all)
 
-"Mode | Key | Function
-"---- | --- | --------
-"n | <C-L> | clears search highlight (by sensible)
-"i | <C-U> | undo in insert mode (by sensible)
-"n, v | <Leader>s | easymotion search
-"
-"Plus all default mappings for loaded modules. Here are some examples:
-"
-"Mode | Key | Function
-"---- | --- | --------
-"n, v | <Leader><Leader>w | easymotion word motion
-"n, v | <Leader><Leader>j | easymotion line down motion
-"n, v | <Leader><Leader>k | easymotion line up motion
-"n, v | <Leader><Leader>b | easymotion word backward motion
-"n | cs | change surrounding
-"n | ds | delete surrounding
-"n | ys | insert surrounding
-"n | <Leader>fb | FZF Buffers
-"n | <Leader>fc | FZF Commands
-"n | <Leader>ff | FZF Files
-"n | <Leader>fh | FZF File history
-"n | <Leader>fl | FZF Lines
-"n | <Leader>fm | FZF Maps
-"n | <Leader>fs | FZF Ag
-"n | <Leader>ft | FZF Tags
-"n | <Leader>fw | FZF Ag word under cursor
+" Mode | Key | Function
+" ---- | --- | --------
+" n | <C-L> | clears search highlight (by sensible)
+" i | <C-U> | undo in insert mode (by sensible)
+" n, v | <Leader>s | easymotion search
+
+" Plus all default mappings for loaded modules. Here are some examples:
+
+" Mode | Key | Function
+" ---- | --- | --------
+" n, v | <Leader><Leader>w | easymotion word motion
+" n, v | <Leader><Leader>j | easymotion line down motion
+" n, v | <Leader><Leader>k | easymotion line up motion
+" n, v | <Leader><Leader>b | easymotion word backward motion
+" n | cs | change surrounding
+" n | ds | delete surrounding
+" n | ys | insert surrounding
+" n | <Leader>fb | FZF Buffers
+" n | <Leader>fc | FZF Commands
+" n | <Leader>ff | FZF Files
+" n | <Leader>fh | FZF File history
+" n | <Leader>fl | FZF Lines
+" n | <Leader>fm | FZF Maps
+" n | <Leader>fs | FZF Ag
+" n | <Leader>ft | FZF Tags
+" n | <Leader>fw | FZF Ag word under cursor
+" n | gc{motion} | Commentary toggle comment on a move
+" n | gcc | Commentary toggle line comment
 
 "===============================================================================
 " Plugins
@@ -52,6 +54,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 
