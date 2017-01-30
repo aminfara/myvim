@@ -16,6 +16,16 @@ Mode | Key | Function
 n | <C-L> | clears search highlight (by sensible)
 i | <C-U> | undo in insert mode (by sensible)
 n, v | <Leader>s | easymotion search
+n | <Leader>fb | FZF Buffers
+n | <Leader>fc | FZF Commands
+n | <Leader>ff | FZF Files
+n | <Leader>fh | FZF File history
+n | <Leader>fl | FZF Lines
+n | <Leader>fm | FZF Maps
+n | <Leader>fs | FZF Ag
+n | <Leader>ft | FZF Tags
+n | <Leader>fw | FZF Ag word under cursor
+n | <leader>n | NERDTreeToggle (this is lazy loaded)
 
 Plus all default mappings for loaded modules. Here are some examples:
 
@@ -28,15 +38,6 @@ n, v | <Leader><Leader>b | easymotion word backward motion
 n | cs | change surrounding
 n | ds | delete surrounding
 n | ys | insert surrounding
-n | <Leader>fb | FZF Buffers
-n | <Leader>fc | FZF Commands
-n | <Leader>ff | FZF Files
-n | <Leader>fh | FZF File history
-n | <Leader>fl | FZF Lines
-n | <Leader>fm | FZF Maps
-n | <Leader>fs | FZF Ag
-n | <Leader>ft | FZF Tags
-n | <Leader>fw | FZF Ag word under cursor
 n | gc{motion} | Commentary toggle comment on a move
 n | gcc | Commentary toggle line comment
 
@@ -49,6 +50,7 @@ n | gcc | Commentary toggle line comment
 * Project fuzzy find - Using FZF - done
 * Find in project (grep, ag, ...) - Using FZF - done
 * Commenting - Using Commentary - done
+* Directory tree - Using NERDTree (Avoided NERDTreeTabs as it was not lazy loaded) - done
 * lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting

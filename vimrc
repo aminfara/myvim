@@ -9,6 +9,16 @@
 " n | <C-L> | clears search highlight (by sensible)
 " i | <C-U> | undo in insert mode (by sensible)
 " n, v | <Leader>s | easymotion search
+" n | <Leader>fb | FZF Buffers
+" n | <Leader>fc | FZF Commands
+" n | <Leader>ff | FZF Files
+" n | <Leader>fh | FZF File history
+" n | <Leader>fl | FZF Lines
+" n | <Leader>fm | FZF Maps
+" n | <Leader>fs | FZF Ag
+" n | <Leader>ft | FZF Tags
+" n | <Leader>fw | FZF Ag word under cursor
+" n | <leader>n | NERDTreeToggle (this is lazy loaded)
 
 " Plus all default mappings for loaded modules. Here are some examples:
 
@@ -21,17 +31,9 @@
 " n | cs | change surrounding
 " n | ds | delete surrounding
 " n | ys | insert surrounding
-" n | <Leader>fb | FZF Buffers
-" n | <Leader>fc | FZF Commands
-" n | <Leader>ff | FZF Files
-" n | <Leader>fh | FZF File history
-" n | <Leader>fl | FZF Lines
-" n | <Leader>fm | FZF Maps
-" n | <Leader>fs | FZF Ag
-" n | <Leader>ft | FZF Tags
-" n | <Leader>fw | FZF Ag word under cursor
 " n | gc{motion} | Commentary toggle comment on a move
 " n | gcc | Commentary toggle line comment
+
 
 "===============================================================================
 " Plugins
@@ -49,12 +51,14 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 
 
@@ -297,6 +301,11 @@ let g:airline_symbols.branch    = '⎇' "⮑, ➔, ➥, ⤴
 let g:airline_symbols.whitespace = 'Ξ'
 
 
+" NERDTree
+"----------------------------------------
+let NERDTreeShowHidden=1
+
+
 "===============================================================================
 " Key Bindings
 "===============================================================================
@@ -320,5 +329,10 @@ nnoremap <silent> <Leader>fm :Maps<CR>
 nnoremap <silent> <Leader>fs :Ag<CR>
 nnoremap <silent> <Leader>ft :Tags<CR>
 nnoremap <silent> <Leader>fw :Ag <C-R><C-W><CR>
+
+
+" NerdTree
+"----------------------------------------
+map <silent> <leader>n :NERDTreeToggle<CR>
 
 " vim:set filetype=vim expandtab shiftwidth=2:
