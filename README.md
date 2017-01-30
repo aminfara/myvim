@@ -26,6 +26,12 @@ n | <Leader>fs | FZF Ag
 n | <Leader>ft | FZF Tags
 n | <Leader>fw | FZF Ag word under cursor
 n | <leader>n | NERDTreeToggle (this is lazy loaded)
+n | <leader>gd | Fugitive Gdiff
+n | <leader>ge | Fugitive Gedit
+n | <leader>gl | Fugitive Git log
+n | <leader>gs | Fugitive Gstatus
+n | <leader>gh | Fugitive Gsplit
+n | <leader>gv | Fugitive Gvsplit
 
 Plus all default mappings for loaded modules. Here are some examples:
 
@@ -51,6 +57,7 @@ n | gcc | Commentary toggle line comment
 * Find in project (grep, ag, ...) - Using FZF - done
 * Commenting - Using Commentary - done
 * Directory tree - Using NERDTree (Avoided NERDTreeTabs as it was not lazy loaded) - done
+* Git support - Using Fugitive - done
 * lazy loading
 * Mnemonic shortcuts
 * Syntax highlighting
@@ -68,7 +75,6 @@ n | gcc | Commentary toggle line comment
 * Autosave
 * jk jump to normal mode
 * Bracket highlighting
-* git support
 * git gutter
 * Move line up and down (sublime like)
 * Block select (per language type)

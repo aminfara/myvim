@@ -19,6 +19,12 @@
 " n | <Leader>ft | FZF Tags
 " n | <Leader>fw | FZF Ag word under cursor
 " n | <leader>n | NERDTreeToggle (this is lazy loaded)
+" n | <leader>gd | Fugitive Gdiff
+" n | <leader>ge | Fugitive Gedit
+" n | <leader>gl | Fugitive Git log
+" n | <leader>gs | Fugitive Gstatus
+" n | <leader>gh | Fugitive Gsplit
+" n | <leader>gv | Fugitive Gvsplit
 
 " Plus all default mappings for loaded modules. Here are some examples:
 
@@ -59,6 +65,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
@@ -334,5 +341,16 @@ nnoremap <silent> <Leader>fw :Ag <C-R><C-W><CR>
 " NerdTree
 "----------------------------------------
 map <silent> <leader>n :NERDTreeToggle<CR>
+
+
+" Fugitive
+"----------------------------------------
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>ge :Gedit<CR>
+nnoremap <silent> <leader>gl :Git log --stat --graph --decorate --all<CR>
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gh :Gsplit<CR>
+nnoremap <silent> <leader>gv :Gvsplit<CR>
+
 
 " vim:set filetype=vim expandtab shiftwidth=2:
