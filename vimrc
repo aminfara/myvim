@@ -264,6 +264,11 @@ if &term =~ '256color'
 endif
 
 
+" Easymotion
+"----------------------------------------
+let g:EasyMotion_smartcase = 1
+
+
 " Airline
 "----------------------------------------
 let g:airline_powerline_fonts = 0
