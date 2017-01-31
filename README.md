@@ -15,37 +15,37 @@ Mode | Key | Function
 ---- | --- | --------
 n | `<C-L>` | clears search highlight (by sensible)
 i | `<C-U>` | undo in insert mode (by sensible)
-n, v | \<Leader>s | easymotion search
-n | \<Leader>fb | FZF Buffers
-n | \<Leader>fc | FZF Commands
-n | \<Leader>ff | FZF Files
-n | \<Leader>fh | FZF File history
-n | \<Leader>fl | FZF Lines
-n | \<Leader>fm | FZF Maps
-n | \<Leader>fs | FZF Ag
-n | \<Leader>ft | FZF Tags
-n | \<Leader>fw | FZF Ag word under cursor
-n | \<leader>n | NERDTreeToggle (this is lazy loaded)
-n | \<leader>gd | Fugitive Gdiff
-n | \<leader>ge | Fugitive Gedit
-n | \<leader>gl | Fugitive Git log
-n | \<leader>gs | Fugitive Gstatus
-n | \<leader>gh | Fugitive Gsplit
-n | \<leader>gv | Fugitive Gvsplit
+n, v | `<Leader>s` | easymotion search
+n | `<Leader>fb` | FZF Buffers
+n | `<Leader>fc` | FZF Commands
+n | `<Leader>ff` | FZF Files
+n | `<Leader>fh` | FZF File history
+n | `<Leader>fl` | FZF Lines
+n | `<Leader>fm` | FZF Maps
+n | `<Leader>fs` | FZF Ag
+n | `<Leader>ft` | FZF Tags
+n | `<Leader>fw` | FZF Ag word under cursor
+n | `<leader>n` | NERDTreeToggle (this is lazy loaded)
+n | `<leader>gd` | Fugitive Gdiff
+n | `<leader>ge` | Fugitive Gedit
+n | `<leader>gl` | Fugitive Git log
+n | `<leader>gs` | Fugitive Gstatus
+n | `<leader>gh` | Fugitive Gsplit
+n | `<leader>gv` | Fugitive Gvsplit
 
 Plus all default mappings for loaded modules. Here are some examples:
 
 Mode | Key | Function
 ---- | --- | --------
-n, v | \<Leader>\<Leader>w | easymotion word motion
-n, v | \<Leader>\<Leader>j | easymotion line down motion
-n, v | \<Leader>\<Leader>k | easymotion line up motion
-n, v | \<Leader>\<Leader>b | easymotion word backward motion
-n | cs | change surrounding
-n | ds | delete surrounding
-n | ys | insert surrounding
-n | gc{motion} | Commentary toggle comment on a move
-n | gcc | Commentary toggle line comment
+n, v | `<Leader><Leader>w` | easymotion word motion
+n, v | `<Leader><Leader>j` | easymotion line down motion
+n, v | `<Leader><Leader>k` | easymotion line up motion
+n, v | `<Leader><Leader>b` | easymotion word backward motion
+n | `cs` | change surrounding
+n | `ds` | delete surrounding
+n | `ys` | insert surrounding
+n | `gc{motion}` | Commentary toggle comment on a move
+n | `gcc` | Commentary toggle line comment
 
 
 # Development
