@@ -27,6 +27,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 
@@ -272,6 +273,53 @@ let g:airline_symbols.whitespace = 'Ξ'
 " NERDTree
 "----------------------------------------
 let NERDTreeShowHidden=1
+
+
+" Syntastic
+"----------------------------------------
+let g:syntastic_error_symbol = '✗✗'
+let g:syntastic_warning_symbol = '!!'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '!'
+let g:syntastic_loc_list_height = 5
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_loc_list = 1
+
+
+"===============================================================================
+" Language settings
+"===============================================================================
+
+" Ruby
+"----------------------------------------
+
+""
+" Syntastic
+"
+if executable('ruby')
+  let g:syntastic_ruby_checkers = ['mri']
+  if executable('rubocop')
+    let g:syntastic_ruby_checkers = g:syntastic_ruby_checkers + ['rubocop']
+    let g:syntastic_ruby_rubocop_args = '--display-cop-names'
+  endif
+endif
+
+
+" Python
+"----------------------------------------
+
+""
+" Syntastic
+"
+if executable('python')
+  let g:syntastic_python_checkers = ['python']
+  if executable('flake8')
+    let g:syntastic_python_checkers = g:syntastic_python_checkers + ['flake8']
+  endif
+endif
 
 
 "===============================================================================
