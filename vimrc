@@ -28,6 +28,7 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 

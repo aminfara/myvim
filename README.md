@@ -46,6 +46,12 @@ n | `ds` | delete surrounding
 n | `ys` | insert surrounding
 n | `gc{motion}` | Commentary toggle comment on a move
 n | `gcc` | Commentary toggle line comment
+n | `[c` | Gitgutter prev hunk
+n | `]c` | Gitgutter next hunk
+n | `<leader>hs` | Gitgutter stage hunk
+n | `<leader>hu` | Gitgutter undo hunk
+o | `{action}ic` | Gitgutter inner hunk
+o | `{action}ic` | Gitgutter outer hunk
 
 
 # Development
@@ -59,14 +65,14 @@ n | `gcc` | Commentary toggle line comment
 * Commenting - Using Commentary - done
 * Directory tree - Using NERDTree (Avoided NERDTreeTabs as it was not lazy loaded) - done
 * Git support - Using Fugitive - done
+* Syntax checking and Lint - Using Syntastic - done
+* Git changes in gutter - Using git-gitter - done
 * lazy loading
 * Mnemonic shortcuts
-* Syntax highlighting
 * Smart Indentation
 * Indentation guide
 * Tags
 * Autocompletion (all buffers, tags, ...)
-* Lint
 * Jump to test file
 * Beautify
 * Multi-cursor (sublime like behavior)
@@ -76,7 +82,6 @@ n | `gcc` | Commentary toggle line comment
 * Autosave
 * jk jump to normal mode
 * Bracket highlighting
-* git gutter
 * Move line up and down (sublime like)
 * Block select (per language type)
 * Persistent undo
