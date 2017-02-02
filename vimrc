@@ -16,7 +16,7 @@ endif
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
-Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -194,6 +194,11 @@ if &term =~ '256color'
   set t_ut=
 endif
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 
 ""
 " Wild menu
@@ -233,14 +238,6 @@ set visualbell                        " beep visually
 " Plugins Configurations
 "===============================================================================
 
-" Solarized color scheme
-"----------------------------------------
-if &term =~ '256color'
-  silent! colorscheme solarized
-  set background=dark
-endif
-
-
 " Easymotion
 "----------------------------------------
 let g:EasyMotion_smartcase = 1
@@ -249,7 +246,7 @@ let g:EasyMotion_smartcase = 1
 " Airline
 "----------------------------------------
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'base16'
 let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')
