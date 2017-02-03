@@ -52,6 +52,8 @@ n | `<leader>hs` | Gitgutter stage hunk
 n | `<leader>hu` | Gitgutter undo hunk
 o | `{action}ic` | Gitgutter inner hunk
 o | `{action}ic` | Gitgutter outer hunk
+i | `<M-n>` | Auto-pairs jump to next closed pairs
+i | `<M-b>` | Auto-pairs toggle
 
 
 # Development
@@ -67,6 +69,7 @@ o | `{action}ic` | Gitgutter outer hunk
 * Git support - Using Fugitive - done
 * Syntax checking and Lint - Using Syntastic - done
 * Git changes in gutter - Using git-gitter - done
+* Brackets auto closing - Using auto-pairs - done
 * lazy loading
 * Mnemonic shortcuts
 * Smart Indentation
