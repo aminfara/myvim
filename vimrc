@@ -89,6 +89,7 @@ set undofile
 set undolevels=2000
 set spellfile=~/.vim/tmp/spell/en.utf-8.add
 set viminfo+=n~/.vim/tmp/viminfo
+let g:netrw_home='~/.vim/tmp'
 " autoread is set by sensible
 set autowriteall
 
