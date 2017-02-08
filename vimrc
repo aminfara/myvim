@@ -361,5 +361,14 @@ nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gh :Gsplit<CR>
 nnoremap <silent> <leader>gv :Gvsplit<CR>
 
+" Help related
+"----------------------------------------
+cabbrev h tab help
+cabbrev help tab help
+
+augroup myvim_help
+  autocmd!
+  autocmd FileType help noremap <buffer> q :q<cr>
+augroup END
 
 " vim:set filetype=vim expandtab shiftwidth=2:

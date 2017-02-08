@@ -32,6 +32,7 @@ n | `<leader>gl` | Fugitive Git log
 n | `<leader>gs` | Fugitive Gstatus
 n | `<leader>gh` | Fugitive Gsplit
 n | `<leader>gv` | Fugitive Gvsplit
+a | `q` | quit for help windows
 
 Plus all default mappings for loaded modules. Here are some examples:
 
@@ -70,6 +71,7 @@ i | `<M-b>` | Auto-pairs toggle
 * Syntax checking and Lint - Using Syntastic - done
 * Git changes in gutter - Using git-gitter - done
 * Brackets auto closing - Using auto-pairs - done
+* Help in new tab - using cabbrev - done
 * lazy loading
 * Mnemonic shortcuts
 * Smart Indentation
