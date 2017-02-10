@@ -71,13 +71,13 @@ i | `<M-b>` | Auto-pairs toggle
 * Syntax checking and Lint - Using Syntastic - done
 * Git changes in gutter - Using git-gitter - done
 * Brackets auto closing - Using auto-pairs - done
-* Help in new tab - using cabbrev - done
+* Help in new tab - Using cabbrev - done
+* Autocompletion - Using neocomplete - partly done
 * lazy loading
 * Mnemonic shortcuts
 * Smart Indentation
 * Indentation guide
 * Tags
-* Autocompletion (all buffers, tags, ...)
 * Jump to test file
 * Beautify
 * Multi-cursor (sublime like behavior)

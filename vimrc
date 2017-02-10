@@ -30,6 +30,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neoinclude.vim'
 call plug#end()
 
 
@@ -289,6 +291,33 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_loc_list = 1
 
 
+" neocomplete
+"----------------------------------------
+" Disable AutoComplPop
+let g:acp_enableAtStartup = 0
+" Use neocomplete
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase
+let g:neocomplete#enable_smart_case = 1
+" Set minimum keyword length
+let g:neocomplete#min_keyword_length = 3
+" Select the first choice automatically
+let g:neocomplete#enable_auto_select = 1
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+ let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+ let g:neocomplete#sources#omni#input_patterns = {}
+endif
+if !exists('g:neocomplete#force_omni_input_patterns')
+ let g:neocomplete#force_omni_input_patterns = {}
+endif
+
 "===============================================================================
 " Language settings
 "===============================================================================
@@ -296,25 +325,51 @@ let g:syntastic_auto_loc_list = 1
 " Ruby
 "----------------------------------------
 
-""
-" Syntastic
-"
 if executable('ruby')
+  ""
+  " OmniCompletion
+  "
+  augroup myvim_ruby
+    autocmd!
+    autocmd FileType ruby,eruby setlocal tabstop=2|set shiftwidth=2
+    autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
+    autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+  augroup END
+
+  ""
+  " Syntastic
+  "
   let g:syntastic_ruby_checkers = ['mri']
   if executable('rubocop')
     let g:syntastic_ruby_checkers = g:syntastic_ruby_checkers + ['rubocop']
     let g:syntastic_ruby_rubocop_args = '--display-cop-names'
   endif
+
+  ""
+  " neocomplete
+  "
+  let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::\w*'
+
 endif
 
 
 " Python
 "----------------------------------------
 
-""
-" Syntastic
-"
 if executable('python')
+  ""
+  " OmniCompletion
+  "
+  augroup myvim_python
+    autocmd!
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  augroup END
+
+  ""
+  " Syntastic
+  "
   let g:syntastic_python_checkers = ['python']
   if executable('flake8')
     let g:syntastic_python_checkers = g:syntastic_python_checkers + ['flake8']
