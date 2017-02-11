@@ -16,6 +16,7 @@ endif
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'chriskempson/base16-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
@@ -30,6 +31,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neoinclude.vim'
 call plug#end()
@@ -198,7 +201,7 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-if filereadable(expand("~/.vimrc_background"))
+if !empty(glob('~/.vim/plugged/base16-vim')) && filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
@@ -318,6 +321,18 @@ if !exists('g:neocomplete#force_omni_input_patterns')
  let g:neocomplete#force_omni_input_patterns = {}
 endif
 
+
+" UltiSnips
+"----------------------------------------
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:UltiSnipsJumpForwardTrigger="<nop>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
 "===============================================================================
 " Language settings
 "===============================================================================
@@ -425,5 +440,22 @@ augroup myvim_help
   autocmd!
   autocmd FileType help noremap <buffer> q :q<cr>
 augroup END
+
+
+" Autocomplete and Snippets
+"----------------------------------------
+function! ExpandSnippetOrKey(key)
+  let g:ulti_expand_or_jump_res = 0
+  let snippet = UltiSnips#ExpandSnippetOrJump()
+  if g:ulti_expand_or_jump_res > 0
+    return snippet
+  else
+    return a:key
+  endif
+endfunction
+
+inoremap <expr> <CR> pumvisible() ? "<C-y><C-R>=ExpandSnippetOrKey(\"\")<CR>" : "\<CR>"
+inoremap <expr> <TAB>  pumvisible() ? "\<C-n>" : "<C-R>=ExpandSnippetOrKey(\"\t\")<CR>"
+
 
 " vim:set filetype=vim expandtab shiftwidth=2:

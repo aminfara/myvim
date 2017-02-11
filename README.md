@@ -33,6 +33,10 @@ n | `<leader>gs` | Fugitive Gstatus
 n | `<leader>gh` | Fugitive Gsplit
 n | `<leader>gv` | Fugitive Gvsplit
 a | `q` | quit for help windows
+i | `<tab>` | neocomplete next item
+i | `<tab>` | UltiSnips expand snippet or jump
+i | `<S-tab>` | UltiSnips jump backward
+
 
 Plus all default mappings for loaded modules. Here are some examples:
 
@@ -73,6 +77,7 @@ i | `<M-b>` | Auto-pairs toggle
 * Brackets auto closing - Using auto-pairs - done
 * Help in new tab - Using cabbrev - done
 * Autocompletion - Using neocomplete - partly done
+* Snippets - Using UltiSnips
 * lazy loading
 * Mnemonic shortcuts
 * Smart Indentation
@@ -83,7 +88,6 @@ i | `<M-b>` | Auto-pairs toggle
 * Multi-cursor (sublime like behavior)
 * Spell-checking
 * Available keys (Maybe)
-* Snippets
 * Autosave
 * jk jump to normal mode
 * Bracket highlighting
