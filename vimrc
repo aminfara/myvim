@@ -327,7 +327,7 @@ endif
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<nop>"
 let g:UltiSnipsJumpForwardTrigger="<nop>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsJumpBackwardTrigger="<nop>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -399,6 +399,21 @@ endif
 let g:mapleader = "\<Space>"
 let g:maplocalleader = "\\"
 
+imap jk <Esc>
+
+vnoremap < <gv
+vnoremap > >gv
+
+noremap <silent> <C-h> :wincmd h<CR>
+noremap <silent> <C-j> :wincmd j<CR>
+noremap <silent> <C-k> :wincmd k<CR>
+noremap <silent> <C-l> :wincmd l<CR>
+noremap <silent> <leader><left>  :wincmd h<CR>
+noremap <silent> <leader><down>  :wincmd j<CR>
+noremap <silent> <leader><up>    :wincmd k<CR>
+noremap <silent> <leader><right> :wincmd l<CR>
+
+
 " Easymotion
 "----------------------------------------
 nmap <Leader>s <Plug>(easymotion-s2)
@@ -454,8 +469,13 @@ function! ExpandSnippetOrKey(key)
   endif
 endfunction
 
-inoremap <expr> <CR> pumvisible() ? "<C-y><C-R>=ExpandSnippetOrKey(\"\")<CR>" : "\<CR>"
-inoremap <expr> <TAB>  pumvisible() ? "\<C-n>" : "<C-R>=ExpandSnippetOrKey(\"\t\")<CR>"
+inoremap <silent> <expr> <CR> pumvisible() ? "<C-y><C-R>=ExpandSnippetOrKey(\"\")<CR>" : "\<CR>"
+
+inoremap <silent> <expr> <TAB> pumvisible() ? "\<C-n>" : "<C-R>=ExpandSnippetOrKey(\"\t\")<CR>"
+snoremap <silent> <TAB> <Esc>:call UltiSnips#ExpandSnippetOrJump()<CR>
+inoremap <silent> <expr> <S-TAB> pumvisible() ? "\<C-p>" : "<C-R>=UltiSnips#JumpBackwards()<CR>"
+snoremap <silent> <S-TAB> <Esc>:call UltiSnips#JumpBackwards()<CR>
+
 
 
 " vim:set filetype=vim expandtab shiftwidth=2:

@@ -13,6 +13,11 @@ vim
 # Key bindings
 Mode | Key | Function
 ---- | --- | --------
+i | `jk` | escape to normal mode
+n | `<C-h>` | jump to left window
+n | `<C-j>` | jump to bottom window
+n | `<C-k>` | jump to top window
+n | `<C-l>` | jump to right window
 n | `<C-L>` | clears search highlight (by sensible)
 i | `<C-U>` | undo in insert mode (by sensible)
 n, v | `<Leader>s` | easymotion search
@@ -77,7 +82,9 @@ i | `<M-b>` | Auto-pairs toggle
 * Brackets auto closing - Using auto-pairs - done
 * Help in new tab - Using cabbrev - done
 * Autocompletion - Using neocomplete - partly done
-* Snippets - Using UltiSnips
+* Snippets - Using UltiSnips - done
+* jk jump to normal mode - done
+* Persistent undo - done
 * lazy loading
 * Mnemonic shortcuts
 * Smart Indentation
@@ -89,11 +96,9 @@ i | `<M-b>` | Auto-pairs toggle
 * Spell-checking
 * Available keys (Maybe)
 * Autosave
-* jk jump to normal mode
 * Bracket highlighting
 * Move line up and down (sublime like)
 * Block select (per language type)
-* Persistent undo
 * Languages to support
   * Python
   * Ruby
