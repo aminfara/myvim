@@ -85,10 +85,10 @@ i | `<M-b>` | Auto-pairs toggle
 * Snippets - Using UltiSnips - done
 * jk jump to normal mode - done
 * Persistent undo - done
+* Indentation guide - done
 * lazy loading
 * Mnemonic shortcuts
 * Smart Indentation
-* Indentation guide
 * Tags
 * Jump to test file
 * Beautify
